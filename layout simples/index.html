@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://contmoura.com.br/wp-content/uploads/2019/09/x-png-icon-8.png" type="image/x-icon">
+    <title>Action Figures</title>
+    <link rel="stylesheet" href="estilo.css">
+    
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script>
+    
+    $(function(){
+      
+      var $btn  = $('.abas [data-filter]'),
+          $lista = $('.lista-categoria [data-categoria]');
+       
+      $btn.on('click', function() {
+        
+        var $btnCategoria = $(this).attr('data-filter');
+        
+        $lista.removeClass('animacao');
+        if ($btnCategoria == 'tudo') {
+            $lista.show().addClass('animacao');
+        } else {
+           
+           $lista.hide().removeClass('animacao').filter('[data-categoria = "' + $btnCategoria + '"]').show().addClass('animacao');
+        }
+        return false;
+        
+      });
+    });
+</script>
+</head>
+<body>
+    <ul class="abas">
+      <li><a href="" class="tudo" data-filter="tudo">Todos</a></li>
+      <li><a href="" class="Statues" data-filter="Statues">Statues</a></li>
+      <li><a href="" class="Articulados" data-filter="Articulados">Articulados</a></li>
+      <li><a href="" class="Para montar" data-filter="Para montar">Para montar</a></li>
+    </ul>
+    <ul class="lista-categoria">
+        <li class="Articulados" data-categoria="Articulados"> 
+            <img src="https://images.tcdn.com.br/img/img_prod/835226/action_figure_one_punch_man_saitama_figma_310_articulado_61797023_1_ff16788139341ab362cadfeeb4d881d9.png" alt="Articulados" title="Articulados">
+        </li>
+        <li class="Statues" data-categoria="Statues"> 
+            <img src="https://c0.wallpaperflare.com/preview/808/48/948/goku-dbz-action-figure-toy.jpg" alt="Statues" title="Statues">
+        </li>
+        <li class="Articulados" data-categoria="Articulados"> 
+            <img src="https://imtoys.com.br/wp-content/uploads/2019/01/rev-eva_00.jpg" alt="Articulados" title="Articulados">
+        </li>
+        <li class="Articulados" data-categoria="Articulados"> 
+            <img src="https://cdn.awsli.com.br/600x700/955/955516/produto/170553412/66fcfac52d.jpg" alt="Articulados" title="Articulados">
+        </li>
+        <li class="Para montar" data-categoria="Para montar"> 
+            <img src="https://static3.tcdn.com.br/img/img_prod/460977/bloco_de_montar_o_predador_the_predator_m38_556_pecas_37295_1_20201211174228.jpg" alt="Para montar" title="Para montar">
+        </li>
+        <li class="Statues" data-categoria="Statues"> 
+            <img src="https://cf.shopee.com.br/file/a138cd248247880f94f231ff5c00a6af" alt="Statues" title="Statues">
+        </li>
+        <li class="Para montar" data-categoria="Para montar"> 
+            <img src="https://ae01.alicdn.com/kf/S6f641942739345b99ac481e31bd9f2ceD.jpg?width=750&height=1080&hash=1830" alt="Para montar" title="Para montar">
+        </li>
+        <li class="Statues" data-categoria="Statues"> 
+            <img src="https://cdn.shopify.com/s/files/1/0557/2853/7667/products/S6951baa3486342d0bd6ed671f427152fM.jpg?v=1680986833" alt="Statues" title="Statues">
+        </li>
+     </ul>
+</body>
+</html>
